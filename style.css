@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
 }
 
-header{
+header {
     display: flex;
     align-items: center;
     gap: 25px;
@@ -20,15 +20,26 @@ header{
     padding: 40px 0 0 80px;
 }
 
-header a{
+header a {
     font-size: 1.5rem;
     font-weight: 600;
     color: #989d9c;
     line-height: 100%;
     cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
-header button{
+header a:hover {
+    color: #666668;
+    transform: scale(1.1);
+}
+
+header a:active {
+    color: #989d9c;
+}
+
+header button {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
@@ -38,9 +49,21 @@ header button{
     border-radius: 20px;
     width: 130px;
     height: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
-main{
+header button:hover {
+    background-color: #5549d6;
+    transform: scale(1.1);
+}
+
+header button:active {
+    background-color: #665ae1;
+    transform: scale(1);
+}
+
+main {
     width: 100%;
     height: 100%;
     display: flex;
@@ -50,22 +73,22 @@ main{
     position: fixed;
 }
 
-.logo-img{
+.logo-img {
     width: 568px;
 }
 
-.txt{
-    width:520px;
+.txt {
+    width: 520px;
 }
 
-.txt h1{
+.txt h1 {
     font-size: 6.255rem;
     font-weight: 900;
     color: #515151;
     line-height: 100%;
 }
 
-.txt h2{
+.txt h2 {
     font-size: 3.625rem;
     font-weight: 500;
     color: #515151;
@@ -73,7 +96,7 @@ main{
     margin: 30px 0;
 }
 
-.txt p{
+.txt p {
     font-size: 1.5rem;
     font-weight: 400;
     color: #848484;
@@ -81,7 +104,7 @@ main{
 
 }
 
-.div-button button{
+.div-button button {
     font-size: 1.75rem;
     font-weight: 700;
     background-color: #adff00;
@@ -90,6 +113,155 @@ main{
     border-radius: 40px;
     width: 240px;
     height: 65px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.div-button button:hover {
+    background-color: #9bff00;
+    transform: scale(1.1);
+}
+
+.div-button button:active {
+    background-color: #adff00;
+    transform: scale(1);
+}
+
+@media screen and (max-width: 1281px) {
+    main {
+        gap: 100px;
+    }
+
+    .logo-img {
+        width: 450px;
+    }
+
+    .txt {
+        width: 400px;
+    }
+
+    .txt h1 {
+        font-size: 5rem;
+    }
+
+    .txt h2 {
+        font-size: 3rem;
+    }
+
+    .txt p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 916px) {
+
+    header {
+        padding: 30px 0 0 60px;
+    }
+
+    header a {
+        font-size: 1.2rem;
+    }
+
+    header button {
+        font-size: 1.2rem;
+        width: 100px;
+        height: 30px;
+    }
+
+    main {
+        gap: 50px;
+    }
+
+    .logo-img {
+        width: 350px;
+    }
+
+    .txt {
+        width: 300px;
+    }
+
+    .txt h1 {
+        font-size: 4rem;
+    }
+
+    .txt h2 {
+        font-size: 2.5rem;
+    }
+
+    .div-button button {
+        font-size: 1.4rem;
+        width: 200px;
+        height: 50px
+    }
+}
+
+@media screen and (max-width: 693px) {
+    header {
+        display: none;
+    }
+
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-img {
+        width: 450px;
+    }
+
+    .txt {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .txt h1 {
+        font-size: 5rem;
+    }
+
+    .txt h2 {
+        font-size: 3rem;
+
+        margin: 10px 0 40px 0;
+    }
+
+    .txt p {
+        display: none;
+    }
+
+    .div-button button {
+        font-size: 1.75rem;
+        width: 240px;
+        height: 65px;
+    }
+
+}
+
+@media screen and (max-width: 465px) {
+    main {
+        gap: 10px;
+    }
+
+    .logo-img {
+        width: 300px;
+    }
+
+    .txt h1 {
+        font-size: 3.5rem;
+    }
+
+    .txt h2 {
+        font-size: 2rem;
+    }
+
+    .div-button button {
+        font-size: 1.4rem;
+        width: 200px;
+        height: 50px
+    }
 }
